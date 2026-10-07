@@ -84,6 +84,8 @@ Set backend environment variables `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS`, 
 
 When the Neon integration prefixes its environment variables with the Vercel store name (for example, `Portfolio_DATABASE_URL`), Django uses that connection string if `DATABASE_URL` is not set.
 
+The sanitized public portfolio dataset is stored in `backend/apps/core/fixtures/public_portfolio.json`. To initialize a new, empty database, run `python manage.py migrate` and then `python manage.py loaddata apps/core/fixtures/public_portfolio.json` from `backend/`. The fixture excludes user accounts, contact messages and uploaded files. Do not load it into a populated database: fixture primary keys can replace existing public content.
+
 ### Portfolio management
 
 Sign in at `http://localhost:3000/admin` with the seeded administrator account. From this dashboard you can update your profile and upload a profile picture or CV, edit the visible copy on every public page, add custom scrollable portfolio sections and choose whether each appears in the navigation, manage projects and their images/tags, skills, experience, blog posts and contact messages, and choose the site's default theme. You do not need Django Admin for routine portfolio management.

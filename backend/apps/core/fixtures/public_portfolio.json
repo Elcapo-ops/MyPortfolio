@@ -1,0 +1,341 @@
+[
+{
+  "model": "portfolio.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Next.js",
+    "slug": "next-js"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 2,
+  "fields": {
+    "name": "Django",
+    "slug": "django"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 3,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 4,
+  "fields": {
+    "name": "PostgreSQL",
+    "slug": "postgresql"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 5,
+  "fields": {
+    "name": "TypeScript",
+    "slug": "typescript"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 6,
+  "fields": {
+    "name": "PyQt",
+    "slug": "pyqt"
+  }
+},
+{
+  "model": "portfolio.tag",
+  "pk": 7,
+  "fields": {
+    "name": "Web Socket",
+    "slug": "web-socket"
+  }
+},
+{
+  "model": "portfolio.profile",
+  "pk": 1,
+  "fields": {
+    "name": "Ahmad Fawad Akhtari",
+    "headline": "Full Stack Developer & Software Engineer",
+    "bio": "I build modern web applications with clean code, scalable architecture and great user experiences. I work across backend systems, APIs, databases and polished frontend interfaces.",
+    "location": "Kabul Afghanistan",
+    "email": "jhonjordan010@gmail.com",
+    "avatar": "",
+    "cv": "",
+    "github_url": "https://github.com/AFA100",
+    "linkedin_url": "https://www.linkedin.com/",
+    "website_url": ""
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 1,
+  "fields": {
+    "name": "Next.js",
+    "category": "Frontend",
+    "level": 75,
+    "sort_order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 2,
+  "fields": {
+    "name": "React",
+    "category": "Frontend",
+    "level": 90,
+    "sort_order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 3,
+  "fields": {
+    "name": "TypeScript",
+    "category": "Frontend",
+    "level": 80,
+    "sort_order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Python",
+    "category": "Backend",
+    "level": 95,
+    "sort_order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 5,
+  "fields": {
+    "name": "Django",
+    "category": "Backend",
+    "level": 100,
+    "sort_order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 6,
+  "fields": {
+    "name": "Laravel",
+    "category": "Backend",
+    "level": 80,
+    "sort_order": 5
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 7,
+  "fields": {
+    "name": "PHP",
+    "category": "Backend",
+    "level": 80,
+    "sort_order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 8,
+  "fields": {
+    "name": "PostgreSQL",
+    "category": "Database",
+    "level": 95,
+    "sort_order": 7
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Docker",
+    "category": "DevOps",
+    "level": 80,
+    "sort_order": 8
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 10,
+  "fields": {
+    "name": "REST APIs",
+    "category": "Architecture",
+    "level": 93,
+    "sort_order": 9
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 11,
+  "fields": {
+    "name": "Git",
+    "category": "Tools",
+    "level": 95,
+    "sort_order": 10
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 12,
+  "fields": {
+    "name": "System Design",
+    "category": "Architecture",
+    "level": 90,
+    "sort_order": 11
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "title": "Image to PDF Converter",
+    "slug": "image-to-pdf",
+    "summary": "A polished Windows utility for converting images into PDFs.",
+    "description": "A modular desktop application focused on reliable image conversion, drag-and-drop workflows, modern UI and maintainable packaging.",
+    "image": "",
+    "live_url": "",
+    "repo_url": "",
+    "featured": true,
+    "sort_order": 0,
+    "created_at": "2026-10-01T11:19:29.774Z",
+    "updated_at": "2026-10-07T08:52:49.697Z",
+    "tags": [
+      6
+    ]
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 2,
+  "fields": {
+    "title": "this is test",
+    "slug": "asdf",
+    "summary": "sdfadsfa",
+    "description": "sdfasdfdasfddddddddddddd",
+    "image": "",
+    "live_url": "",
+    "repo_url": "",
+    "featured": true,
+    "sort_order": 2,
+    "created_at": "2026-10-03T09:28:39.061Z",
+    "updated_at": "2026-10-03T09:28:39.061Z",
+    "tags": [
+      3
+    ]
+  }
+},
+{
+  "model": "blog.blogpost",
+  "pk": 1,
+  "fields": {
+    "title": "test",
+    "slug": "asdfd",
+    "excerpt": "asdfdsf",
+    "content": "safdsfadsf",
+    "cover": "",
+    "published": true,
+    "published_at": "2026-10-03T17:40:00Z",
+    "created_at": "2026-10-03T13:10:37.411Z",
+    "updated_at": "2026-10-03T13:10:37.411Z"
+  }
+},
+{
+  "model": "core.portfoliopage",
+  "pk": "about",
+  "fields": {
+    "eyebrow": "ABOUT",
+    "title": "The engineer behind the interface.",
+    "description": "",
+    "section_title": "Technical toolkit",
+    "section_description": "",
+    "secondary_title": "Experience",
+    "secondary_description": "",
+    "cta_title": "",
+    "cta_description": "",
+    "show_in_navigation": true,
+    "sort_order": 0
+  }
+},
+{
+  "model": "core.portfoliopage",
+  "pk": "projects",
+  "fields": {
+    "eyebrow": "PROJECTS",
+    "title": "Selected work.",
+    "description": "A collection of systems, applications and experiments.",
+    "section_title": "",
+    "section_description": "",
+    "secondary_title": "",
+    "secondary_description": "",
+    "cta_title": "",
+    "cta_description": "",
+    "show_in_navigation": true,
+    "sort_order": 0
+  }
+},
+{
+  "model": "core.portfoliopage",
+  "pk": "blog",
+  "fields": {
+    "eyebrow": "BLOG",
+    "title": "Notes from the stack.",
+    "description": "",
+    "section_title": "",
+    "section_description": "",
+    "secondary_title": "",
+    "secondary_description": "",
+    "cta_title": "",
+    "cta_description": "",
+    "show_in_navigation": true,
+    "sort_order": 0
+  }
+},
+{
+  "model": "core.portfoliopage",
+  "pk": "contact",
+  "fields": {
+    "eyebrow": "CONTACT",
+    "title": "Let's build something useful.",
+    "description": "Tell me what you're building, what problem you're solving, or where you need engineering support.",
+    "section_title": "",
+    "section_description": "",
+    "secondary_title": "",
+    "secondary_description": "",
+    "cta_title": "",
+    "cta_description": "",
+    "show_in_navigation": true,
+    "sort_order": 0
+  }
+},
+{
+  "model": "core.portfoliopage",
+  "pk": "home",
+  "fields": {
+    "eyebrow": "FULL STACK / ARCHITECTURE",
+    "title": "I build digital systems that feel alive.",
+    "description": "I build modern web applications with clean code, scalable architecture and great user experiences.",
+    "section_title": "Selected work",
+    "section_description": "Built to solve real problems.",
+    "secondary_title": "Capabilities",
+    "secondary_description": "Engineering with product thinking.",
+    "cta_title": "Have a project?",
+    "cta_description": "Let's turn the idea into something people enjoy using.",
+    "show_in_navigation": true,
+    "sort_order": 0
+  }
+},
+{
+  "model": "core.sitesettings",
+  "pk": "site",
+  "fields": {
+    "default_theme": "blue"
+  }
+}
+]
