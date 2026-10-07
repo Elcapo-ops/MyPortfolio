@@ -78,9 +78,11 @@ For Gmail, use `smtp.gmail.com`, port `587`, TLS enabled, and SSL disabled. Set 
 Vercel supports both Next.js and Django. Create two Vercel projects from this repository:
 
 1. Frontend project: set Root Directory to `frontend`; configure `NEXT_PUBLIC_API_URL` to the deployed Django URL ending in `/api/v1`.
-2. Backend project: set Root Directory to `backend`. Vercel detects `manage.py` and its WSGI application. Add a PostgreSQL database through the Vercel Marketplace and provide its `DATABASE_URL` to the backend project.
+2. Backend project: set Root Directory to `backend`. Vercel detects `manage.py` and its WSGI application. Add a PostgreSQL database through the Vercel Marketplace. Django reads `DATABASE_URL` or Vercel's Neon integration variable `Portfolio_DATABASE_URL`.
 
 Set backend environment variables `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS`, `CORS_ALLOWED_ORIGINS`, and `CSRF_TRUSTED_ORIGINS` for the deployed project domains, along with the Gmail SMTP variables above. Set the frontend production origin in both CORS and CSRF trusted origins. SMTP credentials must be entered as Vercel environment secrets, never committed to source control. Vercel's function filesystem is not durable: configure durable media storage before relying on avatar, CV, project-image, or blog-image uploads. Migrate the database and create an administrator before opening the deployed dashboard.
+
+When the Neon integration prefixes its environment variables with the Vercel store name (for example, `Portfolio_DATABASE_URL`), Django uses that connection string if `DATABASE_URL` is not set.
 
 ### Portfolio management
 

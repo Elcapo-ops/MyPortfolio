@@ -16,8 +16,9 @@ ROOT_URLCONF="config.urls"
 TEMPLATES=[{"BACKEND":"django.template.backends.django.DjangoTemplates","DIRS":[],"APP_DIRS":True,"OPTIONS":{"context_processors":["django.template.context_processors.request","django.contrib.auth.context_processors.auth","django.contrib.messages.context_processors.messages"]}}]
 WSGI_APPLICATION="config.wsgi.application"
 DATABASES={"default":{"ENGINE":"django.db.backends.postgresql","NAME":os.getenv("DB_NAME","portfolio"),"USER":os.getenv("DB_USER","postgres"),"PASSWORD":os.getenv("DB_PASSWORD","postgres"),"HOST":os.getenv("DB_HOST","localhost"),"PORT":os.getenv("DB_PORT","5432")}}
-if os.getenv("DATABASE_URL"):
-    u=urllib.parse.urlparse(os.getenv("DATABASE_URL"))
+database_url=os.getenv("DATABASE_URL") or os.getenv("Portfolio_DATABASE_URL")
+if database_url:
+    u=urllib.parse.urlparse(database_url)
     database_options={}
     query=urllib.parse.parse_qs(u.query)
     if "sslmode" in query:
