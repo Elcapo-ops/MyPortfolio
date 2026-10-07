@@ -1,0 +1,1 @@
+export function Footer(){return <footer className="relative z-10 mx-auto mt-24 max-w-6xl border-t border-[var(--border)] px-4 py-8 text-sm text-[var(--muted)]"><div className="flex flex-col justify-between gap-3 sm:flex-row"><span>© {new Date().getFullYear()} Ahmad Fawad Akhtari</span><span>Designed & engineered with Next.js</span></div></footer>}

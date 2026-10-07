@@ -1,0 +1,9 @@
+export type ThemeName = "blue" | "light" | "purple" | "green" | "minimal" | "sunset";
+export type Tag = { id: number; name: string; slug: string };
+export type Project = { id: number; title: string; slug: string; summary: string; description: string; image_url: string | null; live_url: string | null; repo_url: string | null; featured: boolean; sort_order: number; tags: Tag[] };
+export type Skill = { id: number; name: string; category: string; level: number; sort_order: number };
+export type Experience = { id: number; company: string; role: string; description: string; start_date: string; end_date: string | null; sort_order: number };
+export type Profile = { name: string; headline: string; bio: string; location: string; email: string; avatar_url: string | null; cv_url: string | null; github_url: string; linkedin_url: string; website_url: string };
+export type BlogPost = { id: number; title: string; slug: string; excerpt: string; content: string; cover_url: string | null; published: boolean; published_at: string | null };
+export type PortfolioPage = { slug: string; eyebrow: string; title: string; description: string; section_title: string; section_description: string; secondary_title: string; secondary_description: string; cta_title: string; cta_description: string; show_in_navigation: boolean; sort_order: number };
+export type SiteSettings = { key: string; default_theme: ThemeName };
