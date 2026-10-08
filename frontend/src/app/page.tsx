@@ -23,6 +23,7 @@ export default async function Home() {
   ]);
   const builtInSlugs = ["home", "about", "projects", "blog", "contact"];
   const customPages = pages.filter((page) => !builtInSlugs.includes(page.slug));
+  const avatarUrl = profile.avatar_url || "/images/profile.jpg";
 
   return (
     <div>
@@ -59,8 +60,8 @@ export default async function Home() {
               <div className="absolute -inset-8 rounded-[40%] bg-[var(--accent)] opacity-20 blur-3xl" />
               <div className="liquid-card glow relative aspect-[4/5] overflow-hidden rounded-[40px] p-3">
                 <div className="relative flex h-full items-end overflow-hidden rounded-[32px] bg-[radial-gradient(circle_at_50%_20%,var(--accent),transparent_35%),linear-gradient(145deg,rgba(255,255,255,.08),transparent)]">
-                  {profile.avatar_url && <img src={profile.avatar_url} alt={profile.name} className="absolute inset-0 h-full w-full object-cover" />}
-                  {profile.avatar_url && <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />}
+                  <img src={avatarUrl} alt={profile.name} className="absolute inset-0 h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
                   <div className="relative z-10 p-7">
                     <p className="text-sm text-white/60">{profile.headline}</p>
                     <p className="profile-name mt-2 text-3xl font-black">{profile.name}</p>
@@ -82,7 +83,7 @@ export default async function Home() {
         <div className="mt-12 grid gap-6 lg:grid-cols-[.8fr_1.2fr]">
           <Reveal>
             <div className="liquid-card rounded-3xl p-7">
-              {profile.avatar_url && <img src={profile.avatar_url} alt={profile.name} className="mb-6 h-28 w-28 rounded-2xl object-cover" />}
+              <img src={avatarUrl} alt={profile.name} className="mb-6 h-28 w-28 rounded-2xl object-cover" />
               <p className="text-sm text-[var(--muted)]">Profile</p>
               <h3 className="mt-2 text-2xl font-bold">{profile.name}</h3>
               <p className="mt-2 text-[var(--accent)]">{profile.headline}</p>

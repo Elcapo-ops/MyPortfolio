@@ -11,6 +11,7 @@ export default async function About() {
     api<Experience[]>("/experience/"),
     api<PortfolioPage>("/pages/about/")
   ]);
+  const avatarUrl = profile.avatar_url || "/images/profile.jpg";
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-24">
@@ -22,7 +23,7 @@ export default async function About() {
       <div className="mt-20 grid gap-6 lg:grid-cols-[.8fr_1.2fr]">
         <Reveal>
           <div className="liquid-card rounded-3xl p-7">
-            {profile.avatar_url && <img src={profile.avatar_url} alt={profile.name} className="mb-6 h-28 w-28 rounded-2xl object-cover" />}
+            <img src={avatarUrl} alt={profile.name} className="mb-6 h-28 w-28 rounded-2xl object-cover" />
             <p className="text-sm text-[var(--muted)]">Profile</p>
             <h2 className="mt-2 text-2xl font-bold">{profile.name}</h2>
             <p className="mt-2 text-[var(--accent)]">{profile.headline}</p>
